@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание API-тестов"
+  short_description: "Пишет API-тесты публичного поведения"
+  default_prompt: "Используй $qaef-write-api-tests, чтобы написать API-тесты публичного поведения и ошибок."

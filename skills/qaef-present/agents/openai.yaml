@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Презентация продукта"
+  short_description: "Создаёт промпт для презентации QAEF"
+  default_prompt: "Используй $qaef-present, чтобы подготовить доказательную русскоязычную презентацию QAEF."

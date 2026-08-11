@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation-record.schema.json",
+  "title": "Запись оценки",
+  "description": "Наблюдения по критериям и негативным сценариям для одного предмета оценки.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["subject", "rubric", "observations", "negative_cases", "status"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "../standards/contracts/evaluation-record.schema.json",
+      "description": "Необязательная относительная ссылка экземпляра на эту схему."
+    },
+    "subject": {"type": "string", "minLength": 1},
+    "rubric": {"type": "array", "items": {"$ref": "#/$defs/rubricItem"}},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+    "negative_cases": {"type": "array", "items": {"$ref": "#/$defs/negativeCase"}},
+    "status": {"$ref": "#/$defs/status"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "PASS"}}, "required": ["status"]},
+      "then": {"properties": {"observations": {"minItems": 1}}}
+    }
+  ],
+  "$defs": {
+    "status": {"enum": ["PASS", "FAIL", "UNKNOWN", "NOT_RUN", "BLOCKED"]},
+    "rubricItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criterion", "expected"],
+      "properties": {
+        "criterion": {"type": "string", "minLength": 1},
+        "expected": {"type": "string", "minLength": 1}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement", "evidence"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 1},
+        "evidence": {"type": "string", "minLength": 1}
+      }
+    },
+    "negativeCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case", "result"],
+      "properties": {
+        "case": {"type": "string", "minLength": 1},
+        "result": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

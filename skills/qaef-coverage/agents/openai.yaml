@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Анализ покрытия"
+  short_description: "Анализирует покрытие и рисковые пробелы"
+  default_prompt: "Используй $qaef-coverage, чтобы найти рисковые пробелы покрытия и выбрать полезные тесты."

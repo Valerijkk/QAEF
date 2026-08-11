@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "verification-report.schema.json",
+  "title": "Отчёт о проверке",
+  "description": "Проверяемое утверждение, проведённые проверки и их evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim", "evidence", "checks", "status", "limitations"],
+  "properties": {
+    "claim": {"type": "string", "minLength": 1},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "checks": {"type": "array", "items": {"$ref": "#/$defs/check"}},
+    "status": {"$ref": "#/$defs/status"},
+    "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "PASS"}}, "required": ["status"]},
+      "then": {
+        "properties": {
+          "evidence": {"minItems": 1},
+          "checks": {"minItems": 1, "items": {"properties": {"status": {"const": "PASS"}}, "required": ["status"]}}
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "status": {"enum": ["PASS", "FAIL", "UNKNOWN", "NOT_RUN", "BLOCKED"]},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "locator", "result"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "locator": {"type": "string", "minLength": 1},
+        "result": {"type": "string", "minLength": 1}
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "status", "evidence_refs"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "status": {"$ref": "#/$defs/status"},
+        "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "PASS"}}, "required": ["status"]},
+          "then": {"properties": {"evidence_refs": {"minItems": 1}}}
+        }
+      ]
+    }
+  }
+}

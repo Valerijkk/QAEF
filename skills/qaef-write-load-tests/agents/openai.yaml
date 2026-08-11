@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание load-тестов"
+  short_description: "Пишет профили нагрузочного тестирования"
+  default_prompt: "Используй $qaef-write-load-tests, чтобы написать нагрузочный профиль по подтверждённой модели трафика."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Оценка AI-результата"
+  short_description: "Оценивает качество промпта и результата"
+  default_prompt: "Используй $qaef-evaluate, чтобы сравнить промпты или AI-результаты по фиксированной rubric."

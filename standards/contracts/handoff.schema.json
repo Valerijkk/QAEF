@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "handoff.schema.json",
+  "title": "Передача результата",
+  "description": "Самодостаточная запись результата, evidence, рисков и следующего действия.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["result", "changed_paths", "evidence", "status", "risks", "next_action"],
+  "properties": {
+    "result": {"type": "string", "minLength": 1},
+    "changed_paths": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "status": {"$ref": "#/$defs/status"},
+    "risks": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "next_action": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "PASS"}}, "required": ["status"]},
+      "then": {"properties": {"evidence": {"minItems": 1}}}
+    }
+  ],
+  "$defs": {
+    "status": {"enum": ["PASS", "FAIL", "UNKNOWN", "NOT_RUN", "BLOCKED"]},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "locator", "result"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "locator": {"type": "string", "minLength": 1},
+        "result": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

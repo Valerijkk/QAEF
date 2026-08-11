@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание security-тестов"
+  short_description: "Пишет разрешённые security negative тесты"
+  default_prompt: "Используй $qaef-write-security-tests, чтобы написать безопасные и разрешённые security negative тесты."

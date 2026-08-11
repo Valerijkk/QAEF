@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "context-packet.schema.json",
+  "title": "Пакет контекста",
+  "description": "Минимальный проверяемый контекст для одной задачи.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task", "sources", "facts", "inferences", "unknowns", "redactions"],
+  "properties": {
+    "task": {"$ref": "#/$defs/task"},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "facts": {"$ref": "#/$defs/textList"},
+    "inferences": {"$ref": "#/$defs/textList"},
+    "unknowns": {"$ref": "#/$defs/textList"},
+    "redactions": {"$ref": "#/$defs/textList"}
+  },
+  "$defs": {
+    "textList": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objective", "mode"],
+      "properties": {
+        "objective": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["existing", "greenfield"]}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "kind", "freshness", "provenance"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "minLength": 1},
+        "freshness": {"type": "string", "minLength": 1},
+        "provenance": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

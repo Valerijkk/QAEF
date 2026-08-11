@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание integration-тестов"
+  short_description: "Пишет integration-тесты реальных границ"
+  default_prompt: "Используй $qaef-write-integration-tests, чтобы написать integration-тесты реальной системной границы."

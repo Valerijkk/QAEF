@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task-contract.schema.json",
+  "title": "Контракт задачи",
+  "description": "Переносимая запись цели, границ и условий приёмки задачи.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["objective", "mode", "scope", "authority", "inputs", "constraints", "acceptance", "unknowns"],
+  "properties": {
+    "objective": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["existing", "greenfield"]},
+    "scope": {"$ref": "#/$defs/scope"},
+    "authority": {"$ref": "#/$defs/authority"},
+    "inputs": {"type": "array", "items": {"$ref": "#/$defs/input"}},
+    "constraints": {"$ref": "#/$defs/textList"},
+    "acceptance": {"$ref": "#/$defs/textList"},
+    "unknowns": {"$ref": "#/$defs/textList"}
+  },
+  "$defs": {
+    "textList": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed_paths", "excluded_paths"],
+      "properties": {
+        "allowed_paths": {"$ref": "#/$defs/textList"},
+        "excluded_paths": {"$ref": "#/$defs/textList"}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read", "write", "execute", "egress"],
+      "properties": {
+        "read": {"type": "boolean"},
+        "write": {"type": "boolean"},
+        "execute": {"type": "boolean"},
+        "egress": {"type": "boolean"}
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "provenance"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "provenance": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

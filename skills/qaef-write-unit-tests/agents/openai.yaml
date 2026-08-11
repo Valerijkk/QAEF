@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание unit-тестов"
+  short_description: "Пишет изолированные unit-тесты в проекте"
+  default_prompt: "Используй $qaef-write-unit-tests, чтобы написать unit-тесты для явно указанного поведения в целевом проекте."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Статус тестовой работы"
+  short_description: "Показывает честный статус тестовой работы"
+  default_prompt: "Используй $qaef-status, чтобы получить краткий статус тестовой работы только по фактам и evidence."

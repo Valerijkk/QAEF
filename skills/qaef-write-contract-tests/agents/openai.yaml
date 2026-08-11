@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание contract-тестов"
+  short_description: "Пишет contract-тесты границ и схем"
+  default_prompt: "Используй $qaef-write-contract-tests, чтобы написать проверяемые contract-тесты границы или схемы."

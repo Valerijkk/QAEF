@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Написание UI-тестов"
+  short_description: "Пишет UI component и end-to-end тесты"
+  default_prompt: "Используй $qaef-write-ui-tests, чтобы написать устойчивые UI component или end-to-end тесты."

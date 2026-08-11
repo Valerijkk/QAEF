@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Проверка quality gate"
+  short_description: "Проверяет работу по проектным критериям"
+  default_prompt: "Используй $qaef-gate, чтобы проверить тестовую работу по утверждённым проектным критериям."

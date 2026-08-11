@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Ревью тестового кода"
+  short_description: "Ревьюит тестовый код и его доказательства"
+  default_prompt: "Используй $qaef-review-tests, чтобы независимо проверить тестовый код и evidence."

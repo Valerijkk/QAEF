@@ -1,0 +1,4 @@
+interface:
+  display_name: "QAEF: Triage падения теста"
+  short_description: "Разделяет дефект продукта, теста и среды"
+  default_prompt: "Используй $qaef-triage, чтобы классифицировать падение теста до любого исправления."

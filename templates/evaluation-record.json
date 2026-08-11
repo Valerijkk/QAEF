@@ -1,0 +1,18 @@
+{
+  "$schema": "../standards/contracts/evaluation-record.schema.json",
+  "subject": "Демонстрационная проверка формы",
+  "rubric": [
+    {
+      "criterion": "Наблюдаемый результат",
+      "expected": "Результат и его evidence будут зафиксированы после выполнения."
+    }
+  ],
+  "observations": [],
+  "negative_cases": [
+    {
+      "case": "Проверка ещё не выполнялась",
+      "result": "Evidence отсутствует; статус остаётся NOT_RUN."
+    }
+  ],
+  "status": "NOT_RUN"
+}
