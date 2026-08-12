@@ -1,0 +1,101 @@
+TouchStone Prompt QA Engineering Framework (QAEF)
+Proprietary License — All Rights Reserved
+Проприетарная лицензия — все права защищены
+
+Copyright (c) 2026 TouchStone Studio. All rights reserved.
+
+--------------------------------------------------------------------------
+РУССКАЯ РЕДАКЦИЯ (основная)
+--------------------------------------------------------------------------
+
+1. Владелец
+
+   Правообладателем настоящего программного обеспечения и сопутствующей
+   документации (далее — «Продукт») является TouchStone Studio (далее —
+   «Владелец»).
+
+2. Разрешённое использование
+
+   Продукт публикуется исключительно для ознакомления и оценки.
+   Любое иное использование, включая, помимо прочего:
+
+   - использование в коммерческих целях;
+   - использование в составе или для нужд любой организации;
+   - копирование, воспроизведение и размещение в других репозиториях;
+   - изменение, переработку и создание производных произведений;
+   - распространение, публикацию, передачу третьим лицам и сублицензирование;
+   - включение в другие продукты, услуги или наборы инструментов;
+   - использование для обучения моделей машинного обучения,
+
+   допускается ТОЛЬКО при наличии предварительного письменного разрешения
+   Владельца, полученного для конкретного случая использования.
+
+3. Отсутствие подразумеваемых прав
+
+   Настоящая лицензия не предоставляет никаких прав на товарные знаки,
+   фирменные наименования, знаки обслуживания и патенты Владельца.
+   Отсутствие явного запрета не означает разрешения. Молчание Владельца
+   не является согласием.
+
+4. Запрос разрешения
+
+   Разрешение запрашивается у Владельца через репозиторий Продукта.
+   Разрешение действует только в объёме, который в нём прямо указан.
+
+5. Отказ от гарантий
+
+   ПРОДУКТ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ
+   ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ,
+   КАЧЕСТВА, ОТСУТСТВИЯ ДЕФЕКТОВ И НЕНАРУШЕНИЯ ПРАВ ТРЕТЬИХ ЛИЦ.
+
+   Продукт является authoring framework и не содержит среды исполнения.
+   Он не гарантирует корректность, полноту или безопасность тестов,
+   создаваемых с его помощью, и не заменяет инженерную и юридическую
+   проверку результата.
+
+6. Ограничение ответственности
+
+   НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ВЛАДЕЛЕЦ НЕ НЕСЁТ ОТВЕТСТВЕННОСТИ ПО ЛЮБЫМ
+   ТРЕБОВАНИЯМ, ИСКАМ ИЛИ УБЫТКАМ, ВОЗНИКШИМ ИЗ ИСПОЛЬЗОВАНИЯ ПРОДУКТА ИЛИ
+   НЕВОЗМОЖНОСТИ ЕГО ИСПОЛЬЗОВАНИЯ.
+
+7. Прекращение действия
+
+   Права по настоящей лицензии прекращаются автоматически при нарушении
+   любого из её условий. После прекращения использование Продукта должно
+   быть прекращено, а его копии — удалены.
+
+--------------------------------------------------------------------------
+ENGLISH VERSION (reference translation)
+--------------------------------------------------------------------------
+
+1. Owner. This software and its accompanying documentation (the "Product")
+   are owned by TouchStone Studio (the "Owner").
+
+2. Permitted use. The Product is published for viewing and evaluation only.
+   Any other use — including commercial use, use by or for any organisation,
+   copying, mirroring, modification, creation of derivative works,
+   distribution, publication, sublicensing, inclusion in other products or
+   toolchains, and use as training data for machine-learning models —
+   requires the Owner's prior written permission for that specific use.
+
+3. No implied rights. No trademark, trade name, service mark or patent
+   rights are granted. Absence of an explicit prohibition is not permission,
+   and silence from the Owner is not consent.
+
+4. Requesting permission. Permission is requested through the Product's
+   repository and applies only to the scope it expressly states.
+
+5. Disclaimer of warranty. THE PRODUCT IS PROVIDED "AS IS", WITHOUT WARRANTY
+   OF ANY KIND, EXPRESS OR IMPLIED. The Product is an authoring framework and
+   ships no runtime; it does not guarantee the correctness, completeness or
+   security of any tests produced with it.
+
+6. Limitation of liability. IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE PRODUCT.
+
+7. Termination. Rights under this licence terminate automatically upon any
+   breach of its terms.
+
+In case of any discrepancy between the two versions, the Russian version
+prevails.

@@ -38,4 +38,6 @@ QAEF описывает контракты, агентов, skills, шаблон
 - [QAEF.md](QAEF.md) — продуктовый контракт и цикл работы.
 - [COMMANDS.md](COMMANDS.md) — двадцать `$qaef-*` skills.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — путь от контрактов до evidence.
-- [NOTICE.md](NOTICE.md) — сведения о владельце и статусе лицензирования.
+- [docs/GLOSSARY.md](docs/GLOSSARY.md) — словарь терминов контракта.
+- [CHANGELOG.md](CHANGELOG.md) — что изменилось между версиями.
+- [LICENSE](LICENSE) — условия использования; [NOTICE.md](NOTICE.md) — владелец продукта.

@@ -2,22 +2,26 @@
 
 Этот positive allowlist определяет переносимую публичную поставку QAEF. Файл, отсутствующий в списке, не является частью поставки.
 
+Поставка и управление репозиторием разделены. Переносимая поставка — то, что переносится в целевой проект. Файлы управления репозиторием обслуживают публикацию и в поставку не входят.
+
 ## Counts
 
 | Group | Files |
 |---|---:|
 | root | 6 |
-| docs | 9 |
+| docs | 10 |
 | agents | 10 |
 | skills | 41 |
 | workflows | 12 |
 | templates | 13 |
 | standards | 14 |
-| examples | 11 |
+| examples | 17 |
 | adapters | 9 |
-| **Total** | **125** |
+| **Переносимая поставка** | **132** |
+| repository governance | 9 |
+| **Всего в репозитории** | **141** |
 
-## Positive allowlist
+## Positive allowlist — переносимая поставка
 
 - `adapters/claude-code/CLAUDE-QAEF.md`
 - `adapters/claude-code/README.md`
@@ -42,6 +46,7 @@
 - `docs/ARCHITECTURE.md`
 - `docs/CONTEXT-ENGINEERING.md`
 - `docs/EVALUATION.md`
+- `docs/GLOSSARY.md`
 - `docs/PORTABILITY.md`
 - `docs/PROMPT-ENGINEERING.md`
 - `docs/SECURITY-MODEL.md`
@@ -50,10 +55,16 @@
 - `docs/WORKFLOWS.md`
 - `examples/bad/advice-only-instead-of-code.md`
 - `examples/bad/invented-command-and-pass.md`
+- `examples/bad/mock-assertion-without-behavior.md`
 - `examples/bad/parallel-architecture.md`
+- `examples/bad/secret-in-test-data.md`
 - `examples/good/api-test-change.md`
 - `examples/good/existing-framework-change.md`
 - `examples/good/greenfield-framework-slice.md`
+- `examples/good/integration-test-change.md`
+- `examples/good/load-test-profile.md`
+- `examples/good/security-negative-test.md`
+- `examples/good/ui-test-change.md`
 - `examples/good/unit-test-change.md`
 - `examples/paired/context-packet-pair.md`
 - `examples/paired/prompt-after.md`
@@ -144,3 +155,17 @@
 - `workflows/test-design.md`
 - `workflows/verification.md`
 - `workflows/write-tests.md`
+
+## Файлы управления репозиторием
+
+Не входят в переносимую поставку и не копируются в целевой проект.
+
+- `.gitattributes`
+- `.github/ISSUE_TEMPLATE/bug_report.md`
+- `.github/ISSUE_TEMPLATE/feature_request.md`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `.gitignore`
+- `CHANGELOG.md`
+- `CONTRIBUTING.md`
+- `LICENSE`
+- `SECURITY.md`
